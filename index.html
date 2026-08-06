@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto em Desenvolvimento | Entrega em 10/08/2026</title>
-
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -38,7 +34,6 @@
             overflow-x: hidden;
         }
 
-        /* Ambient Glow Background Effects */
         .ambient-glow-top {
             position: absolute;
             width: 600px;
@@ -62,7 +57,6 @@
             pointer-events: none;
         }
 
-        /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
@@ -76,8 +70,6 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--color-accent);
         }
-
-        /* Pulse animation for development status indicator */
         @keyframes pulse-glow {
             0%, 100% { opacity: 0.8; transform: scale(1); }
             50% { opacity: 0.3; transform: scale(1.15); }
@@ -146,14 +138,10 @@
 
     <main class="relative z-10 flex-grow flex items-center py-12">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
-            
-            <!-- Badge -->
             <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-[rgba(184,110,40,0.12)] border border-[rgba(184,110,40,0.35)] mb-8">
                 <span class="w-2.5 h-2.5 rounded-full bg-[#b86e28] pulse-accent"></span>
                 <span class="text-xs sm:text-sm font-semibold text-[#b86e28] tracking-wider uppercase">Previsão Oficial: 10 de Agosto de 2026</span>
             </div>
-
-            <!-- Title -->
             <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
                 Estamos preparando algo <span class="bg-gradient-to-r from-[#b86e28] via-[#e29b55] to-[#b86e28] bg-clip-text text-transparent">incrível</span> para você.
             </h1>
@@ -166,8 +154,6 @@
                 <div class="absolute -top-24 -right-24 w-48 h-48 bg-[#b86e28]/10 rounded-full blur-2xl group-hover:bg-[#b86e28]/20 transition-all duration-500"></div>
 
                 <span class="text-xs sm:text-sm font-bold text-[#9ab0c2] uppercase tracking-widest block mb-2">Faltam Exatamente</span>
-                
-                <!-- Main Big Days Counter -->
                 <div class="flex items-center justify-center space-x-2 my-2">
                     <span id="days-counter" class="text-7xl sm:text-9xl font-black tracking-tight text-white transition-all duration-300">00</span>
                 </div>
@@ -176,7 +162,6 @@
                     <span id="days-label" class="text-base sm:text-xl font-bold text-[#b86e28] tracking-wide">Dias Restantes</span>
                 </div>
 
-                <!-- Date Callout Footer inside Card -->
                 <div class="mt-8 pt-6 border-t border-[rgba(255,255,255,0.08)] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-[#9ab0c2]">
                     <div class="flex items-center space-x-2">
                         <i class="fa-regular fa-calendar-check text-[#b86e28]"></i>
@@ -187,35 +172,6 @@
                         <span>Status: <span class="text-[#4ade80] font-semibold">Dentro do Cronograma</span></span>
                     </div>
                 </div>
-            </div>
-
-            <div class="max-w-xl mx-auto bg-[#13151b] border border-[rgba(255,255,255,0.08)] rounded-2xl p-6 shadow-lg">
-                <h2 class="text-lg font-bold text-white mb-2 flex items-center justify-center space-x-2">
-                    <i class="fa-regular fa-bell text-[#b86e28]"></i>
-                    <span>Quer ser notificado no lançamento?</span>
-                </h2>
-                <p class="text-xs text-[#9ab0c2] mb-4">
-                    Cadastre seu e-mail para receber um aviso assim que o sistema estiver disponível.
-                </p>
-
-                <form id="notify-form" onsubmit="handleNotifySubmit(event)" class="flex flex-col sm:flex-row gap-2">
-                    <input 
-                        type="email" 
-                        id="notify-email"
-                        required 
-                        placeholder="Seu melhor e-mail profissional" 
-                        class="w-full bg-[#060709] border border-[rgba(255,255,255,0.08)] focus:border-[#b86e28] text-white placeholder-[#9ab0c2]/50 px-4 py-3 rounded-xl outline-none transition-all text-xs sm:text-sm"
-                    >
-                    <button 
-                        type="submit" 
-                        class="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#b86e28] hover:bg-[#98561c] text-white font-semibold text-xs sm:text-sm transition-all shadow-lg shadow-[#b86e28]/20 shrink-0 flex items-center justify-center space-x-2"
-                    >
-                        <span>Avisar-me</span>
-                        <i class="fa-solid fa-arrow-right text-xs"></i>
-                    </button>
-                </form>
-
-                <div id="notify-feedback" class="hidden mt-3 p-3 rounded-xl text-xs font-medium"></div>
             </div>
 
         </div>
@@ -235,7 +191,6 @@
     </footer>
 
     <script>
-        // Target release date: August 10, 2026 (10/08/2026)
         const targetDate = new Date('2026-08-10T00:00:00');
 
         function calculateDaysRemaining() {
@@ -246,7 +201,6 @@
                 return 0;
             }
 
-            // Calculate whole remaining days
             const days = Math.ceil(differenceMs / (1000 * 60 * 60 * 24));
             return days;
         }
@@ -258,8 +212,7 @@
             if (!daysElement) return;
 
             const remainingDays = calculateDaysRemaining();
-            
-            // Format number with leading zero if less than 10
+
             const formattedDays = remainingDays < 10 && remainingDays >= 0 ? `0${remainingDays}` : remainingDays;
             
             daysElement.innerText = formattedDays;
@@ -269,7 +222,6 @@
             }
         }
 
-        // Handle quick email notification subscription form
         function handleNotifySubmit(event) {
             event.preventDefault();
             const emailInput = document.getElementById('notify-email');
