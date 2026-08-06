@@ -48,8 +48,8 @@
 
         .ambient-glow-bottom {
             position: absolute;
-            width: 500px;
-            height: 500px;
+            width: 250px;
+            height: 250px;
             background: radial-gradient(circle, rgba(184, 110, 40, 0.1) 0%, rgba(6, 7, 9, 0) 70%);
             bottom: -150px;
             right: -100px;
@@ -136,25 +136,25 @@
         </div>
     </header>
 
-    <main class="relative z-10 flex-grow flex items-center py-12">
+    <main class="relative z-10 flex-grow flex items-center py-6">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-center">
             <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full bg-[rgba(184,110,40,0.12)] border border-[rgba(184,110,40,0.35)] mb-8">
                 <span class="w-2.5 h-2.5 rounded-full bg-[#b86e28] pulse-accent"></span>
                 <span class="text-xs sm:text-sm font-semibold text-[#b86e28] tracking-wider uppercase">Previsão Oficial: 10 de Agosto de 2026</span>
             </div>
             <div class="bg-[#13151b] border border-[rgba(184,110,40,0.35)] rounded-3xl p-8 sm:p-12 mb-12 shadow-2xl shadow-black/60 relative overflow-hidden group">
-                <div class="absolute -top-24 -right-24 w-48 h-48 bg-[#b86e28]/10 rounded-full blur-2xl group-hover:bg-[#b86e28]/20 transition-all duration-500"></div>
+                <div class="absolute -top-12 -right-24 w-48 h-48 bg-[#b86e28]/10 rounded-full blur-2xl group-hover:bg-[#b86e28]/20 transition-all duration-500"></div>
 
                 <span class="text-xs sm:text-sm font-bold text-[#9ab0c2] uppercase tracking-widest block mb-2">Faltam Exatamente</span>
                 <div class="flex items-center justify-center space-x-2 my-2">
-                    <span id="days-counter" class="text-7xl sm:text-9xl font-black tracking-tight text-white transition-all duration-300">00</span>
+                    <span id="days-counter" class="text-3xl sm:text-4xl font-black tracking-tight text-white transition-all duration-300">00</span>
                 </div>
 
                 <div class="inline-block bg-[rgba(184,110,40,0.12)] border border-[rgba(184,110,40,0.35)] px-6 py-2 rounded-full mt-2">
                     <span id="days-label" class="text-base sm:text-xl font-bold text-[#b86e28] tracking-wide">Dias Restantes</span>
                 </div>
 
-                <div class="mt-8 pt-6 border-t border-[rgba(255,255,255,0.08)] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-[#9ab0c2]">
+                <div class="mt-4 pt-3 border-t border-[rgba(255,255,255,0.08)] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-[#9ab0c2]">
                     <div class="flex items-center space-x-2">
                         <i class="fa-regular fa-calendar-check text-[#b86e28]"></i>
                         <span>Data do Lançamento: <strong class="text-white">10/08/2026</strong></span>
